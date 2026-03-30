@@ -4,7 +4,7 @@
      ============================================================ -->
 
 <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;600;700;800&family=Space+Mono&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Space+Mono&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 
 <style>
@@ -35,14 +35,21 @@
   --lp-on-secondary-fixed: #111f12;
   --lp-on-secondary-fixed-variant: #3c4a3c;
 
-  --lp-tertiary: #211500;
+  /* Lawsons Brand Colours */
+  --lp-brand-green: #009640;
+  --lp-brand-green-dark: #007a34;
+  --lp-brand-green-light: rgba(0, 150, 64, 0.12);
+  --lp-brand-yellow: #FFE600;
+  --lp-brand-yellow-dim: rgba(255, 230, 0, 0.15);
+
+  --lp-tertiary: #003d1a;
   --lp-on-tertiary: #ffffff;
-  --lp-tertiary-container: #3b2900;
-  --lp-on-tertiary-container: #b18e49;
-  --lp-tertiary-fixed: #ffdea5;
-  --lp-tertiary-fixed-dim: #e9c176;
-  --lp-on-tertiary-fixed: #261900;
-  --lp-on-tertiary-fixed-variant: #5d4201;
+  --lp-tertiary-container: #005a28;
+  --lp-on-tertiary-container: #009640;
+  --lp-tertiary-fixed: #b8f5c8;
+  --lp-tertiary-fixed-dim: #7ad992;
+  --lp-on-tertiary-fixed: #003d1a;
+  --lp-on-tertiary-fixed-variant: #009640;
 
   --lp-surface: #fcfcfc;
   --lp-surface-dim: #dadadc;
@@ -72,7 +79,7 @@
 
   /* Fonts */
   --lp-font-headline: 'Noto Serif', serif;
-  --lp-font-body: 'Manrope', sans-serif;
+  --lp-font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --lp-font-mono: 'Space Mono', monospace;
 
   /* Transitions */
@@ -118,7 +125,7 @@
 }
 
 .lugarde-premier-page ::selection {
-  background-color: var(--lp-primary-fixed);
+  background-color: var(--lp-brand-yellow);
   color: var(--lp-primary);
 }
 
@@ -204,7 +211,7 @@
 }
 
 .lugarde-premier-page .lp-btn-primary:hover {
-  background-color: var(--lp-primary-container);
+  background-color: var(--lp-brand-green-dark);
 }
 
 .lugarde-premier-page .lp-btn-outline {
@@ -337,7 +344,7 @@
   font-family: var(--lp-font-mono) !important;
   text-transform: uppercase;
   letter-spacing: 0.4em;
-  color: var(--lp-on-tertiary-fixed-variant);
+  color: var(--lp-brand-green);
   margin-bottom: 2rem;
   font-size: 0.75rem;
   font-weight: 600;
@@ -349,8 +356,8 @@
 .lugarde-premier-page .lp-hero__tag-line {
   display: inline-block;
   width: 3rem;
-  height: 1px;
-  background-color: var(--lp-on-tertiary-fixed-variant);
+  height: 2px;
+  background-color: var(--lp-brand-yellow);
 }
 
 .lugarde-premier-page .lp-hero__title {
@@ -510,7 +517,7 @@
   letter-spacing: 0.15em;
   margin-bottom: 1.5rem;
   display: block;
-  color: var(--lp-primary);
+  color: var(--lp-brand-green);
   font-weight: 700;
 }
 
@@ -543,7 +550,7 @@
 }
 
 .lugarde-premier-page .lp-path-card:hover .lp-path-card__link {
-  color: var(--lp-primary);
+  color: var(--lp-brand-green);
 }
 
 .lugarde-premier-page .lp-path-card__link .material-symbols-outlined {
@@ -601,8 +608,8 @@
 .lugarde-premier-page .lp-technical__tag-line {
   display: inline-block;
   width: 3rem;
-  height: 1px;
-  background-color: var(--lp-outline-variant);
+  height: 2px;
+  background-color: var(--lp-brand-yellow);
 }
 
 .lugarde-premier-page .lp-technical__title {
@@ -668,7 +675,7 @@
 }
 
 .lugarde-premier-page .lp-tech-card__num {
-  color: var(--lp-primary);
+  color: var(--lp-brand-green);
   font-family: var(--lp-font-mono) !important;
   font-size: 1.25rem;
   font-weight: 700;
@@ -698,7 +705,7 @@
 }
 
 .lugarde-premier-page .lp-tech-stat {
-  border-left: 2px solid var(--lp-primary);
+  border-left: 2px solid var(--lp-brand-green);
   padding-left: 1rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -709,7 +716,7 @@
   font-size: 10px;
   font-family: var(--lp-font-mono) !important;
   text-transform: uppercase;
-  color: var(--lp-primary);
+  color: var(--lp-brand-green);
   font-weight: 700;
 }
 
@@ -751,7 +758,7 @@
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: var(--lp-primary);
+  color: var(--lp-brand-green);
   margin-bottom: 0.5rem;
   font-weight: 700;
 }
@@ -777,7 +784,7 @@
 
 .lugarde-premier-page .lp-credential .material-symbols-outlined {
   font-size: 2.5rem;
-  color: var(--lp-primary);
+  color: var(--lp-brand-green);
 }
 
 .lugarde-premier-page .lp-credential__name {

@@ -3,35 +3,19 @@
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Lugarde Premier | Preview — All Blocks Combined</title>
+  <title>Lugarde Premier | Lawsons</title>
 </head>
 <body style="margin:0; padding:0;">
-
-<!-- 
-  MAGENTO USAGE INSTRUCTIONS:
-  ============================
-  In your Magento CMS Page, wrap all the blocks inside a div with class="lugarde-premier-page":
-  
-  <div class="lugarde-premier-page">
-    {{block class="Magento\Cms\Block\Block" block_id="lugarde-shared-styles"}}
-    {{block class="Magento\Cms\Block\Block" block_id="lugarde-hero"}}
-    {{block class="Magento\Cms\Block\Block" block_id="lugarde-path-and-technical"}}
-    {{block class="Magento\Cms\Block\Block" block_id="lugarde-credentials-and-cta"}}
-  </div>
-
-  NOTE: No nav or footer blocks — the Magento store's own header/footer will be used.
--->
 
 <div class="lugarde-premier-page">
 
 <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;600;700;800&family=Space+Mono&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Space+Mono&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 
 <style>
 /* =========================================================================
-   LUGARDE PREMIER — SCOPED DESIGN SYSTEM
-   All rules prefixed with .lugarde-premier-page
+   LUGARDE PREMIER — SCOPED DESIGN SYSTEM (Lawsons Branded)
    ========================================================================= */
 
 .lugarde-premier-page {
@@ -52,14 +36,23 @@
   --lp-secondary-fixed-dim: #bbcbb8;
   --lp-on-secondary-fixed: #111f12;
   --lp-on-secondary-fixed-variant: #3c4a3c;
-  --lp-tertiary: #211500;
+
+  /* Lawsons Brand Colours */
+  --lp-brand-green: #009640;
+  --lp-brand-green-dark: #007a34;
+  --lp-brand-green-light: rgba(0, 150, 64, 0.12);
+  --lp-brand-yellow: #FFE600;
+  --lp-brand-yellow-dim: rgba(255, 230, 0, 0.15);
+
+  --lp-tertiary: #003d1a;
   --lp-on-tertiary: #ffffff;
-  --lp-tertiary-container: #3b2900;
-  --lp-on-tertiary-container: #b18e49;
-  --lp-tertiary-fixed: #ffdea5;
-  --lp-tertiary-fixed-dim: #e9c176;
-  --lp-on-tertiary-fixed: #261900;
-  --lp-on-tertiary-fixed-variant: #5d4201;
+  --lp-tertiary-container: #005a28;
+  --lp-on-tertiary-container: #009640;
+  --lp-tertiary-fixed: #b8f5c8;
+  --lp-tertiary-fixed-dim: #7ad992;
+  --lp-on-tertiary-fixed: #003d1a;
+  --lp-on-tertiary-fixed-variant: #009640;
+
   --lp-surface: #fcfcfc;
   --lp-surface-dim: #dadadc;
   --lp-surface-bright: #fcfcfc;
@@ -82,9 +75,12 @@
   --lp-on-error: #ffffff;
   --lp-error-container: #ffdad6;
   --lp-on-error-container: #93000a;
+
+  /* Fonts */
   --lp-font-headline: 'Noto Serif', serif;
-  --lp-font-body: 'Manrope', sans-serif;
+  --lp-font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --lp-font-mono: 'Space Mono', monospace;
+
   --lp-ease: cubic-bezier(0.4, 0, 0.2, 1);
   --lp-duration: 300ms;
 
@@ -96,27 +92,18 @@
   -moz-osx-font-smoothing: grayscale !important;
 }
 
-.lugarde-premier-page *,
-.lugarde-premier-page *::before,
-.lugarde-premier-page *::after {
-  box-sizing: border-box !important;
-  margin: 0;
-  padding: 0;
-}
-
+.lugarde-premier-page *, .lugarde-premier-page *::before, .lugarde-premier-page *::after { box-sizing: border-box !important; margin: 0; padding: 0; }
 .lugarde-premier-page img { display: block; max-width: 100%; height: auto; }
 .lugarde-premier-page a { text-decoration: none; color: inherit; }
 .lugarde-premier-page button { cursor: pointer; border: none; background: none; font-family: inherit; }
 .lugarde-premier-page ul { list-style: none; }
-.lugarde-premier-page ::selection { background-color: var(--lp-primary-fixed); color: var(--lp-primary); }
+.lugarde-premier-page ::selection { background-color: var(--lp-brand-yellow); color: var(--lp-primary); }
 
 /* Material Icons */
 .lugarde-premier-page .material-symbols-outlined {
   font-family: 'Material Symbols Outlined' !important;
   font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-  font-size: 24px;
-  display: inline-block;
-  vertical-align: middle;
+  font-size: 24px; display: inline-block; vertical-align: middle;
 }
 
 /* Blueprint Grid */
@@ -126,26 +113,13 @@
 }
 
 /* Container */
-.lugarde-premier-page .lp-container {
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-@media (min-width: 1024px) {
-  .lugarde-premier-page .lp-container { padding-left: 3rem; padding-right: 3rem; }
-}
+.lugarde-premier-page .lp-container { max-width: 1440px; margin-left: auto; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem; }
+@media (min-width: 1024px) { .lugarde-premier-page .lp-container { padding-left: 3rem; padding-right: 3rem; } }
 
 /* Buttons */
-.lugarde-premier-page .lp-btn {
-  display: inline-flex; align-items: center; justify-content: center;
-  font-family: var(--lp-font-body) !important;
-  font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em; font-weight: 700;
-  transition: all var(--lp-duration) var(--lp-ease); white-space: nowrap;
-}
+.lugarde-premier-page .lp-btn { display: inline-flex; align-items: center; justify-content: center; font-family: var(--lp-font-body) !important; font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em; font-weight: 700; transition: all var(--lp-duration) var(--lp-ease); white-space: nowrap; }
 .lugarde-premier-page .lp-btn-primary { background-color: var(--lp-primary); color: var(--lp-on-primary); padding: 1.25rem 2.5rem; }
-.lugarde-premier-page .lp-btn-primary:hover { background-color: var(--lp-primary-container); }
+.lugarde-premier-page .lp-btn-primary:hover { background-color: var(--lp-brand-green-dark); }
 .lugarde-premier-page .lp-btn-outline { background-color: transparent; border: 1px solid var(--lp-outline); color: var(--lp-on-surface); padding: 1.25rem 2.5rem; }
 .lugarde-premier-page .lp-btn-outline:hover { background-color: var(--lp-surface-container-low); }
 .lugarde-premier-page .lp-btn-cta-white { background-color: #ffffff; color: var(--lp-primary); padding: 1.5rem 3rem; font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em; font-weight: 700; transition: all var(--lp-duration) var(--lp-ease); }
@@ -153,15 +127,15 @@
 .lugarde-premier-page .lp-btn-cta-ghost { background-color: transparent; border: 1px solid rgba(255,255,255,0.4); color: #ffffff; padding: 1.5rem 3rem; font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em; font-weight: 700; transition: all var(--lp-duration) var(--lp-ease); }
 .lugarde-premier-page .lp-btn-cta-ghost:hover { background-color: rgba(255,255,255,0.1); }
 
-/* HERO — Full-width 50/50 layout */
+/* HERO */
 .lugarde-premier-page .lp-hero { position: relative; min-height: 100vh; border-bottom: 1px solid rgba(195,199,204,0.3); }
 .lugarde-premier-page .lp-hero__grid { display: grid; grid-template-columns: 1fr; gap: 0; align-items: stretch; min-height: 100vh; }
 @media (min-width: 1024px) { .lugarde-premier-page .lp-hero__grid { grid-template-columns: 1fr 1fr; } }
 .lugarde-premier-page .lp-hero__content { display: flex; flex-direction: column; justify-content: center; padding: 4rem 1.5rem; position: relative; }
 @media (min-width: 1024px) { .lugarde-premier-page .lp-hero__content { padding: 6rem 5rem 6rem 5rem; border-right: 1px solid rgba(195,199,204,0.3); } }
 .lugarde-premier-page .lp-hero__doc-ref { position: absolute; top: 0; left: 0; padding: 1rem; font-family: var(--lp-font-mono) !important; font-size: 10px; opacity: 0.3; text-transform: uppercase; letter-spacing: 0.15em; }
-.lugarde-premier-page .lp-hero__tag { font-family: var(--lp-font-mono) !important; text-transform: uppercase; letter-spacing: 0.4em; color: var(--lp-on-tertiary-fixed-variant); margin-bottom: 2rem; font-size: 0.75rem; font-weight: 600; display: flex; align-items: center; gap: 1rem; }
-.lugarde-premier-page .lp-hero__tag-line { display: inline-block; width: 3rem; height: 1px; background-color: var(--lp-on-tertiary-fixed-variant); }
+.lugarde-premier-page .lp-hero__tag { font-family: var(--lp-font-mono) !important; text-transform: uppercase; letter-spacing: 0.4em; color: var(--lp-brand-green); margin-bottom: 2rem; font-size: 0.75rem; font-weight: 600; display: flex; align-items: center; gap: 1rem; }
+.lugarde-premier-page .lp-hero__tag-line { display: inline-block; width: 3rem; height: 2px; background-color: var(--lp-brand-yellow); }
 .lugarde-premier-page .lp-hero__title { font-family: var(--lp-font-headline) !important; font-size: clamp(2.5rem, 6vw, 6rem); color: var(--lp-primary); line-height: 0.95; margin-bottom: 2.5rem; letter-spacing: -0.03em; font-weight: 700; }
 .lugarde-premier-page .lp-hero__title em { font-style: italic; }
 .lugarde-premier-page .lp-hero__desc { font-family: var(--lp-font-body) !important; font-size: 1.125rem; color: var(--lp-on-surface-variant); max-width: 32rem; margin-bottom: 3rem; line-height: 1.7; font-weight: 300; }
@@ -186,11 +160,11 @@
 @media (max-width: 767px) { .lugarde-premier-page .lp-path-card:first-child { border-right: none; border-bottom: 1px solid rgba(195,199,204,0.3); } }
 .lugarde-premier-page .lp-path-card:hover { background-color: var(--lp-surface-container); }
 .lugarde-premier-page .lp-path-card__content { position: relative; z-index: 2; }
-.lugarde-premier-page .lp-path-card__module { font-family: var(--lp-font-mono) !important; font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1.5rem; display: block; color: var(--lp-primary); font-weight: 700; }
+.lugarde-premier-page .lp-path-card__module { font-family: var(--lp-font-mono) !important; font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1.5rem; display: block; color: var(--lp-brand-green); font-weight: 700; }
 .lugarde-premier-page .lp-path-card__title { font-family: var(--lp-font-headline) !important; font-size: 2.25rem; margin-bottom: 2rem; color: var(--lp-on-surface); font-weight: 700; }
 .lugarde-premier-page .lp-path-card__desc { font-family: var(--lp-font-body) !important; color: var(--lp-on-surface-variant); margin-bottom: 3rem; max-width: 28rem; line-height: 1.6; }
 .lugarde-premier-page .lp-path-card__link { display: inline-flex; align-items: center; gap: 1rem; font-family: var(--lp-font-mono) !important; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; transition: color var(--lp-duration) var(--lp-ease); }
-.lugarde-premier-page .lp-path-card:hover .lp-path-card__link { color: var(--lp-primary); }
+.lugarde-premier-page .lp-path-card:hover .lp-path-card__link { color: var(--lp-brand-green); }
 .lugarde-premier-page .lp-path-card__link .material-symbols-outlined { font-size: 0.875rem; }
 .lugarde-premier-page .lp-path-card__bg-num { position: absolute; top: 2.5rem; right: 2.5rem; font-family: var(--lp-font-mono) !important; font-size: 12rem; line-height: 1; opacity: 0.05; pointer-events: none; user-select: none; }
 
@@ -198,8 +172,8 @@
 .lugarde-premier-page .lp-technical { padding: 8rem 0; background-color: #ffffff; position: relative; overflow: hidden; }
 .lugarde-premier-page .lp-technical__bg { position: absolute; inset: 0; opacity: 0.2; pointer-events: none; }
 .lugarde-premier-page .lp-technical__header { max-width: 48rem; margin-bottom: 6rem; position: relative; z-index: 2; }
-.lugarde-premier-page .lp-technical__tag { font-family: var(--lp-font-mono) !important; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.4em; color: var(--lp-on-surface-variant); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem; font-weight: 400; }
-.lugarde-premier-page .lp-technical__tag-line { display: inline-block; width: 3rem; height: 1px; background-color: var(--lp-outline-variant); }
+.lugarde-premier-page .lp-technical__tag { font-family: var(--lp-font-mono) !important; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.4em; color: var(--lp-on-surface-variant); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem; }
+.lugarde-premier-page .lp-technical__tag-line { display: inline-block; width: 3rem; height: 2px; background-color: var(--lp-brand-yellow); }
 .lugarde-premier-page .lp-technical__title { font-family: var(--lp-font-headline) !important; font-size: clamp(2.5rem, 5vw, 3.75rem); color: var(--lp-primary); line-height: 1.1; margin-bottom: 2rem; font-weight: 700; }
 .lugarde-premier-page .lp-technical__subtitle { font-family: var(--lp-font-body) !important; font-size: 1.25rem; color: var(--lp-on-surface-variant); font-weight: 300; line-height: 1.6; }
 .lugarde-premier-page .lp-technical__grid { display: grid; grid-template-columns: 1fr; gap: 3rem; position: relative; z-index: 2; }
@@ -210,12 +184,12 @@
 .lugarde-premier-page .lp-tech-card__img-wrap--standard { border: 1px solid rgba(195,199,204,0.3); }
 .lugarde-premier-page .lp-tech-card__img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
 .lugarde-premier-page .lp-tech-card__body { display: flex; gap: 1.5rem; }
-.lugarde-premier-page .lp-tech-card__num { color: var(--lp-primary); font-family: var(--lp-font-mono) !important; font-size: 1.25rem; font-weight: 700; flex-shrink: 0; }
+.lugarde-premier-page .lp-tech-card__num { color: var(--lp-brand-green); font-family: var(--lp-font-mono) !important; font-size: 1.25rem; font-weight: 700; flex-shrink: 0; }
 .lugarde-premier-page .lp-tech-card__content-title { font-family: var(--lp-font-headline) !important; font-size: 1.5rem; margin-bottom: 1rem; color: var(--lp-on-surface); font-weight: 700; }
 .lugarde-premier-page .lp-tech-card__content-desc { font-family: var(--lp-font-body) !important; color: var(--lp-on-surface-variant); font-size: 0.875rem; line-height: 1.7; margin-bottom: 1.5rem; }
 .lugarde-premier-page .lp-tech-card__stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-.lugarde-premier-page .lp-tech-stat { border-left: 2px solid var(--lp-primary); padding-left: 1rem; padding-top: 0.25rem; padding-bottom: 0.25rem; }
-.lugarde-premier-page .lp-tech-stat__label { display: block; font-size: 10px; font-family: var(--lp-font-mono) !important; text-transform: uppercase; color: var(--lp-primary); font-weight: 700; }
+.lugarde-premier-page .lp-tech-stat { border-left: 2px solid var(--lp-brand-green); padding-left: 1rem; padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.lugarde-premier-page .lp-tech-stat__label { display: block; font-size: 10px; font-family: var(--lp-font-mono) !important; text-transform: uppercase; color: var(--lp-brand-green); font-weight: 700; }
 .lugarde-premier-page .lp-tech-stat__value { font-size: 0.875rem; }
 
 /* CREDENTIALS */
@@ -223,11 +197,11 @@
 .lugarde-premier-page .lp-credentials__inner { display: flex; flex-direction: column; gap: 3rem; }
 @media (min-width: 1024px) { .lugarde-premier-page .lp-credentials__inner { flex-direction: row; justify-content: space-between; align-items: center; } }
 .lugarde-premier-page .lp-credentials__heading { max-width: 28rem; }
-.lugarde-premier-page .lp-credentials__tag { font-family: var(--lp-font-mono) !important; font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--lp-primary); margin-bottom: 0.5rem; font-weight: 700; }
+.lugarde-premier-page .lp-credentials__tag { font-family: var(--lp-font-mono) !important; font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--lp-brand-green); margin-bottom: 0.5rem; font-weight: 700; }
 .lugarde-premier-page .lp-credentials__title { font-family: var(--lp-font-headline) !important; font-size: 1.875rem; color: var(--lp-primary); font-weight: 700; }
 .lugarde-premier-page .lp-credentials__items { display: flex; flex-wrap: wrap; gap: 2.5rem 4rem; }
 .lugarde-premier-page .lp-credential { display: flex; align-items: center; gap: 1rem; }
-.lugarde-premier-page .lp-credential .material-symbols-outlined { font-size: 2.5rem; color: var(--lp-primary); }
+.lugarde-premier-page .lp-credential .material-symbols-outlined { font-size: 2.5rem; color: var(--lp-brand-green); }
 .lugarde-premier-page .lp-credential__name { display: block; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
 .lugarde-premier-page .lp-credential__desc { font-size: 10px; color: var(--lp-on-surface-variant); font-family: var(--lp-font-mono) !important; }
 
@@ -431,6 +405,6 @@
   </div>
 </section>
 
-</div><!-- end .lugarde-premier-page -->
+</div>
 </body>
 </html>
